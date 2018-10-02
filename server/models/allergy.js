@@ -10,7 +10,9 @@ module.exports = (sequelize, DataTypes) => {
   );
   Allergy.associate = function(models) {
     // associations can be defined here
-    Allergy.belongsTo(models.User);
+    Allergy.belongsTo(models.User, {
+      allowNull: false
+    });
   };
   return Allergy;
 };

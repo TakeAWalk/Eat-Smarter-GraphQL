@@ -118,7 +118,7 @@ const Mutation = new GraphQLObjectType({
         return db.Allergy.create({
           allergyDesc: args.allergyDesc,
           allergyApiCode: args.allergyApiCode,
-          UserId: args.userId
+          UserId: args.UserId
         });
       }
     }

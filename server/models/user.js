@@ -12,7 +12,9 @@ module.exports = (sequelize, DataTypes) => {
   );
   User.associate = function(models) {
     // associations can be defined here
-    User.hasMany(models.Allergy);
+    User.hasMany(models.Allergy, {
+      onDelete: "cascase"
+    });
   };
   return User;
 };
